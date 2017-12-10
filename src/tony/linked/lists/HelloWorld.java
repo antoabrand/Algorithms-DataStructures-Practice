@@ -1,7 +1,6 @@
 package tony.linked.lists;
 
 import java.util.LinkedList;
-
 import java.util.*;
 
 public class HelloWorld {
@@ -17,14 +16,14 @@ public class HelloWorld {
 			try {
 				System.out.println("Give a method name, e.g., add,push,pop,removeFirst,remove");
 				String methodName = input.next();
-				if(methodName == "0") {break;}
+					if(methodName == "0") {break;}
 				System.out.println("Give a number");
 				Integer num = (Integer) input.nextInt();
-				if(num == 0) {break;}
+					if(num == 0) {break;}
 				changeNPrint(methodName, myLinkedList, num);
 				System.out.println();
 				System.out.println("-------------------------------------------------------------");
-			} catch(InputMismatchException e) {
+			} catch(NullPointerException | InputMismatchException e) {
 				System.out.println("Your input is wrong. Fix it!");
 			}
 		
@@ -65,7 +64,7 @@ public class HelloWorld {
 			System.out.printf("Your list is now: " + myLinkedList.toString());
 			break;
 		default:
-			System.out.println("You have to put something");
+			System.out.println("You have to put a method name or this isn't going to work. :(");
 			break;
 		}
 
