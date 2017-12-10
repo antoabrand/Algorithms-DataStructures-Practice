@@ -10,23 +10,27 @@ public class HelloWorld {
 		LinkedList<Integer> myLinkedList = new LinkedList<>();
 
 		int keepGoing = 1;
-		System.out.println("Press zero to stop");
+		System.out.println("Type 'done' to stop");
 
 		while (keepGoing > 0)
 			try {
 				System.out.println("Give a method name, e.g., add,push,pop,removeFirst,remove");
-				String methodName = input.next();
-					if(methodName == "0") {break;}
-				System.out.println("Give a number");
-				Integer num = (Integer) input.nextInt();
-					if(num == 0) {break;}
-				changeNPrint(methodName, myLinkedList, num);
-				System.out.println();
-				System.out.println("-------------------------------------------------------------");
-			} catch(NullPointerException | InputMismatchException e) {
+
+				if (input.next().equalsIgnoreCase("Done")) {break;} 
+				else {
+					// grab method name and number to use in altering list
+					String methodName = input.next();
+					System.out.println("Give a number");
+					Integer num = (Integer) input.nextInt();
+					// make the change and print it out
+					changeNPrint(methodName, myLinkedList, num);
+					System.out.println();
+					System.out.println("-------------------------------------------------------------");
+				}
+			} catch (NullPointerException | InputMismatchException e) {
 				System.out.println("Your input is wrong. Fix it!");
 			}
-		
+
 		System.out.println("All Done!");
 
 	}
@@ -81,19 +85,19 @@ public class HelloWorld {
  * Requires sequential scanning for locating data within structure - no indices
  * 
  * ...Pros: dynamic, allocates needed memory in run-time, very efficient if we
- *		 want to manipulate the first Elements, stores items with different size
+ * want to manipulate the first Elements, stores items with different size
  * ...Cons: wastes memory because of references, nodes must be read from the
- * 		beginning as they have sequential access, items reached in O(1) - linear
- * 		complexity, reverse traversing is difficult - Solution: doubly linked lists
- * 		-> easier to read, but memory is wasted in allocating space for a back
- * 		pointer
+ * beginning as they have sequential access, items reached in O(1) - linear
+ * complexity, reverse traversing is difficult - Solution: doubly linked lists
+ * -> easier to read, but memory is wasted in allocating space for a back
+ * pointer
  * 
  * Insertion/Removal of items -
  * 
  * linkedList.add() - add item to at end of list - not simple, need to traverse
- * 		whole linked list to find last node find node pointing to null, then update
- * 		references when we get there O(N) time complexity 
- * linkedList.push() - O(1) - because it will always only have to iterate once at the beginning of the list
+ * whole linked list to find last node find node pointing to null, then update
+ * references when we get there O(N) time complexity linkedList.push() - O(1) -
+ * because it will always only have to iterate once at the beginning of the list
  * linkedList.removeFirst()- removing an item from beginning of list - O(1)
  * linkedList.remove() - an item from anywhere else - O(N)
  *
