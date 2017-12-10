@@ -1,5 +1,5 @@
 --LinkedLists
-    Node - composed of data & reference/link to next node in sequence
+    Node - composed of data & reference/link to next/previous node in sequence
 
     Used to implement stacks, queues
 
@@ -12,3 +12,5 @@
         as they have sequential access, itesm reached in O(1) - linear complexity,
         reverse traversing is difficult - Solution: doubly linked lists -> easier to read, 
         but memory is wasted in allocating space for a back pointer 
+
+    Insertion of items - simple, update references 
