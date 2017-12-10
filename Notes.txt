@@ -1,0 +1,14 @@
+--LinkedLists
+    Node - composed of data & reference/link to next node in sequence
+
+    Used to implement stacks, queues
+
+    Requires sequential scanning for locating data within structure - no indices
+
+    ...Pros: dynamic, allocates needed memory in run-time,
+        very efficient if we want to manipulate the first Elements,
+        stores items with different size
+    ...Cons: wastes memory bc of references, nodes must be read from the beginning 
+        as they have sequential access, itesm reached in O(1) - linear complexity,
+        reverse traversing is difficult - Solution: doubly linked lists -> easier to read, 
+        but memory is wasted in allocating space for a back pointer 
