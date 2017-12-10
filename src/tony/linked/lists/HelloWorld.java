@@ -10,29 +10,37 @@ public class HelloWorld {
 		LinkedList<Integer> myLinkedList = new LinkedList<>();
 
 		int keepGoing = 1;
+		System.out.println("Welcome to the linkedList apparatus!");
+		System.out.println("This small app will take a method name and perform some action on a list given a number.");
+		System.out.println("Enjoy!");
+		giveMeSomeSpaceAndLines();
 		System.out.println("Type 'done' to stop");
 
 		while (keepGoing > 0)
 			try {
 				System.out.println("Give a method name, e.g., add,push,pop,removeFirst,remove");
-
-				if (input.next().equalsIgnoreCase("Done")) {break;} 
-				else {
-					// grab method name and number to use in altering list
-					String methodName = input.next();
+				// grab method name and number to use in altering list
+				String methodName = input.next().toString();
+				if (methodName.equalsIgnoreCase("Done")) {break;} 
+				else {	
 					System.out.println("Give a number");
-					Integer num = (Integer) input.nextInt();
+					Integer num = (Integer)input.nextInt();
 					// make the change and print it out
+					
 					changeNPrint(methodName, myLinkedList, num);
-					System.out.println();
-					System.out.println("-------------------------------------------------------------");
+					giveMeSomeSpaceAndLines();
 				}
 			} catch (NullPointerException | InputMismatchException e) {
-				System.out.println("Your input is wrong. Fix it!");
+				System.out.println("Your input is wrong. Fix it! (Hint...it should be a number like was asked for :)~ )");
 			}
 
 		System.out.println("All Done!");
 
+	}
+	
+	private static void giveMeSomeSpaceAndLines() {
+		System.out.println();
+		System.out.println("-------------------------------------------------------------");
 	}
 
 	/**
@@ -40,6 +48,9 @@ public class HelloWorld {
 	 * 
 	 **/
 	private static void changeNPrint(String methodName, LinkedList<Integer> myLinkedList, Integer num) {
+		
+		String successMsg = "Your list is now: ";
+		String failureMsg = "You have to put an actual method name or this isn't going to work. :(";
 
 		switch (methodName.toLowerCase()) {
 
@@ -48,12 +59,12 @@ public class HelloWorld {
 		// and then append the item to the list
 		case "add": // O(N)
 			myLinkedList.add(num);
-			System.out.printf("Your list is now: " + myLinkedList.toString());
+			System.out.printf(successMsg + myLinkedList.toString());
 			break;
 		// .push() will place item in front of list - most efficient
 		case "push": // O(1)
 			myLinkedList.push(num);
-			System.out.printf("Your list is now: " + myLinkedList.toString());
+			System.out.printf(successMsg + myLinkedList.toString());
 			break;
 		case "pop": // O(1)
 			Integer poppedNum = myLinkedList.pop();
@@ -61,14 +72,14 @@ public class HelloWorld {
 			break;
 		case "remove":
 			myLinkedList.remove(num); // O(N)
-			System.out.printf("Your list is now: " + myLinkedList.toString());
+			System.out.printf(successMsg + myLinkedList.toString());
 			break;
 		case "removeFirst": // O(1)
 			myLinkedList.removeFirst();
-			System.out.printf("Your list is now: " + myLinkedList.toString());
+			System.out.printf(successMsg + myLinkedList.toString());
 			break;
 		default:
-			System.out.println("You have to put a method name or this isn't going to work. :(");
+			System.out.println(failureMsg);
 			break;
 		}
 
