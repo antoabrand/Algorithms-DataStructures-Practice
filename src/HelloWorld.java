@@ -1,11 +1,13 @@
-package tony.linked.lists;
+
 
 import java.util.LinkedList;
 import java.util.*;
 
 public class HelloWorld {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
+	
 		Scanner input = new Scanner(System.in);
 		LinkedList<Integer> myLinkedList = new LinkedList<>();
 
@@ -34,7 +36,7 @@ public class HelloWorld {
 				System.out.println("Your input is wrong. Fix it! (Hint...it should be a number like was asked for :)~ )");
 			}
 
-		System.out.println("All Done!");
+		System.out.println("Goodbye!");
 
 	}
 	
