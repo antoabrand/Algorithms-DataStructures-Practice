@@ -1,9 +1,10 @@
+package tony.linked.lists;
 
 
 import java.util.LinkedList;
 import java.util.*;
 
-public class HelloWorld {
+public class LinkedListDemoApp {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
