@@ -1,56 +1,51 @@
 package tony.BubbleSort;
 
-import java.util.*;
+public class BubbleSort {
 
-public class  BubbleSort {
+  public static void main(String args[]) {
 
-    public static void main(String args[]) {
-        int[] someArray = new int[7];
-        someArray[0] = 20;
-        someArray[1] = 35;
-        someArray[2] = -15;
-        someArray[3] = 7;
-        someArray[4] = 55;
-        someArray[5] = 1;
-        someArray[6] = -22;
+    int[] intArray = {20, 35, -15, 7, 55, -22};
 
-        System.out.println(reverseWords(null));
-
-    }
-
-    //bubbleSort
-    public static int[] bubbleSort(int[] array) {
-
-        //compare the left to the right for each element in the array
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < array[i] + 1) {
-                int tempSlot = 0;
-                int smallerElement;
-                int largerElement;
-            }
+    for (int lastUnsortedIndex = intArray.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) { // O(n)
+                                                                                                    // -
+                                                                                                    // outer
+                                                                                                    // loop
+                                                                                                    // iterates
+                                                                                                    // right
+                                                                                                    // to
+                                                                                                    // left
+                                                                                                    // through
+                                                                                                    // array
+                                                                                                    // and
+                                                                                                    // sets
+                                                                                                    // the
+                                                                                                    // last
+                                                                                                    // end
+      for (int i = 0; i < lastUnsortedIndex; i++) { // O(n) //inner loop iterates left to right
+                                                    // comparing values and swapping
+        // O(n) x O(n)
+        if (intArray[i] > intArray[i + 1]) {
+          swap(intArray, i, i + 1);
         }
-
-        return array;
+      }
     }
 
-    public static String reverseWords(String string) {
-
-        try {
-            List<String> myStringList = Arrays.asList(string.split(" "));
-            Collections.reverse(myStringList);
-
-            StringBuilder sb = new StringBuilder();
-
-            for (String s : myStringList) {
-                sb.append(s + " ");
-            }
-            return sb.toString();
-
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-
-        return "Executed but failed.";
+    for (int i = 0; i < intArray.length; i++) {
+      System.out.println(intArray[i]);
     }
+
+
+  }
+
+  //stores first element value in a temp variable so as to not lose during swapping 
+  public static void swap(int[] array, int index, int index2) {
+    if (index == index2) {
+      return;
+    }
+
+    int temp = array[index];
+    array[index] = array[index2];
+    array[index2] = temp;
+  }
 
 }
