@@ -19,7 +19,6 @@ public class BubbleSort {
                                                                                                     // and
                                                                                                     // sets
                                                                                                     // the
-                                                                                                    // last
                                                                                                     // end
       for (int i = 0; i < lastUnsortedIndex; i++) { // O(n) //inner loop iterates left to right
                                                     // comparing values and swapping
