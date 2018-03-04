@@ -1,5 +1,30 @@
 package hacker.rank.challenges;
 
+/**
+ * 
+ *	Your task is to create the class Add and the required methods so that the code prints the sum of the numbers passed to the function add.
+ *	
+ *
+ *	Sample Input
+
+	1
+	2
+	3
+	4
+	5
+	6
+	
+	Sample Output
+
+	1+2=3
+	1+2+3=6
+	1+2+3+4+5=15
+	1+2+3+4+5+6=21
+ *
+ *
+ *
+ */
+
 public class Add {
 
 	public static void main(String[] args) {
