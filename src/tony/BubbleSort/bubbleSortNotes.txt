@@ -1,0 +1,10 @@
+BubbleSort Notes
+
+        As algorithm progresses, will partition into a sorted partition
+    and an unsorted partition, using the same array that we are sorting logically.
+
+        We compare each element with it's neighboring element from left to right.  If left
+    element is smaller we leave it as is, otherwise we swap them out using a temporary
+    index to hold the an element.
+
+    Time COMPLEXITY - quadratic O(n^2)
