@@ -14,6 +14,7 @@ package hacker.rank.challenges;
 	5
 	6
 	
+	
 	Sample Output
 
 	1+2=3
