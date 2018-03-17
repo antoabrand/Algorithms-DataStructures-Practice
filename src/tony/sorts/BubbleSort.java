@@ -1,4 +1,4 @@
-package tony.BubbleSort;
+package tony.sorts;
 
 public class BubbleSort {
 

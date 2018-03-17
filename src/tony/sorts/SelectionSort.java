@@ -1,4 +1,4 @@
-package tony.selection.sort;
+package tony.sorts;
 
 public class SelectionSort {
 

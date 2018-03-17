@@ -1,0 +1,17 @@
+Similar to BubbleSort and SelectionSort in that sorting groups the collection into 2 
+separate groups, one sorted and one unsorted.  This time we are iterating from L -> R
+
+firstUnsortedIndex = 1 
+
+i=0 - used to traverse the sorted partition from R -> L 
+
+newElement - the value we want to insert into the sorted partition
+
+- inPlace algorithm - does not take up additional memory  
+
+- stable algorithm 
+
+This algorithm does not take swap method, instead uses shifting in order to move 
+elements into their correctly sorted spots.
+
+Assumes element in position zero is in the correct position 
