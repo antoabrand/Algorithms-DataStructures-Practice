@@ -14,7 +14,7 @@ public class InsertionSort {
 			
 			int i; 
 			
-			//this loop looking for correct position to insert and does the shifting 
+			// this loop looking for correct position to insert and does the shifting 
 			for(i = firstUnsortedIndex; i > 0 && intArray[i-1] > newElement ; i--) {
 				intArray[i] = intArray[i-1];
 			}
