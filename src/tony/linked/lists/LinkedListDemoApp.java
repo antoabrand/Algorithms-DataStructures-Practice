@@ -1,6 +1,5 @@
 package tony.linked.lists;
 
-
 import java.util.LinkedList;
 import java.util.*;
 

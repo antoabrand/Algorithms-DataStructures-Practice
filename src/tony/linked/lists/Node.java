@@ -1,11 +1,14 @@
 package tony.linked.lists;
 
-public class Node<T extends Comparable<T>> {
+public class Node<T extends Comparable<T>> { //extend Comparable to compare nodes to eachother and check if
+	//if it is a String node, Integer node, etc...
 
+	//data that node holds
 	private T data;
 	// reference/pointer - which points to the next node in our linkedList
-	private Node<?> nextNode;
+	private Node<T> nextNode;
 
+	//constructor 
 	public Node(T data) {
 		this.data = data;
 	}
@@ -14,7 +17,8 @@ public class Node<T extends Comparable<T>> {
 		return data;
 	}
 
-	public Node<?> getNextNode() {
+	//useful when checking if you are at the last node - last node wil return null
+	public Node<T> getNextNode() {
 		return nextNode;
 	}
 
@@ -22,7 +26,7 @@ public class Node<T extends Comparable<T>> {
 		this.data = data;
 	}
 
-	public void setNextNode(Node<?> nextNode) {
+	public void setNextNode(Node<T> nextNode) {
 		this.nextNode = nextNode;
 	}
 

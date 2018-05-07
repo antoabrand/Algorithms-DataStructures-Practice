@@ -1,8 +1,8 @@
 package cci.is.unique;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 import java.util.Set; 
@@ -12,6 +12,10 @@ public class IsUnique {
 	public static void main(String[] args) {
 	Random r = new Random();
 	String name = "abrm҂";
+	
+	LinkedList <String> myLinkedList = new LinkedList<>();
+	
+
 	
 	char [] randoString = new char [256];
 	StringBuilder s = new StringBuilder();
