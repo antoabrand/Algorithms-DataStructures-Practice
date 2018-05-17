@@ -70,7 +70,7 @@ public class LinkedList<T extends Comparable<T>> implements IList<T>{
 		
 	
 		
-	}
+	} 
 
 	@Override
 	public void traverseList() {
