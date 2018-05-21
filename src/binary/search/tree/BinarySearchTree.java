@@ -6,16 +6,26 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
 
 	@Override
 	public void traversal() {
-		// TODO Auto-generated method stub
+		if (root != null)
+			inOrderTraversal(root);
 
 	}
 
+	private void inOrderTraversal(Node<T> node) {
+		if (node.getLeftChild() != null)
+			inOrderTraversal(node.getLeftChild());
+		System.out.print(node + " --> ");
+
+		if (node.getRightChild() != null)
+			inOrderTraversal(node.getRightChild());
+	}
+
 	@Override
-	public void add(T data, Node<T> node) {
+	public void add(T data) {
 		if (this.root == null) {
 			this.root = new Node<>(data);
 		} else {
-			insertNewNode(data, node);
+			insertNewNode(data, root);
 		}
 	}
 
@@ -32,9 +42,13 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
 			// do for the right side now since we know that the new data is large than the
 			// root - therefore keeping our tree balances
 			if (node.getRightChild() != null) {
+				insertNewNode(data, node.getRightChild());
+				
+			}
+			else {
 				Node<T> newNode = new Node<>(data);
 				node.setRightChild(newNode);
-			}
+				}
 		}
 
 	}
@@ -47,14 +61,30 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
 
 	@Override
 	public T getMin() {
-		// TODO Auto-generated method stub
-		return null;
+
+		if (root == null)
+			return null;
+
+		return getMinValue(root);
+	}
+
+	private T getMinValue(Node<T> node) {
+		if (node.getLeftChild() != null)
+			return getMinValue(node.getLeftChild());
+		return node.getData();
 	}
 
 	@Override
 	public T getMax() {
-		// TODO Auto-generated method stub
-		return null;
+		if (root == null)
+			return null;
+		return getMaxValue(root);
+	}
+
+	private T getMaxValue(Node<T> node) {
+		if (node.getRightChild() != null)
+			return getMaxValue(node.getRightChild());
+		return node.getData();
 	}
 
 }

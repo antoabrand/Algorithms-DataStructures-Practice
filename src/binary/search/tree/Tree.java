@@ -4,7 +4,7 @@ public interface Tree<T>{
 	
 	public void traversal();
 
-	public void add(T data, Node<T> node);
+	public void add(T data);
 
 	public void remove(T data);
 
