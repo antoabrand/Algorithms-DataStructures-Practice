@@ -44,9 +44,9 @@ public class LargestPalindromeProduct {
 
 	private static boolean isPalindrome(Long num) {
 		String[] numArray = num.toString().split("");
-		int count = numArray.length - 1;
+		int index = numArray.length - 1;
 		for (String n : numArray) {
-			if (!n.equals(numArray[count--])) {
+			if (!n.equals(numArray[index--])) {
 				return false;
 			}
 		}
