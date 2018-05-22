@@ -11,4 +11,6 @@ public interface Tree<T>{
 	public T getMin();
 
 	public T getMax();
+	
+	public int getSize();
 }
