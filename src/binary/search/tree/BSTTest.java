@@ -16,11 +16,11 @@ public class BSTTest {
 		
 		System.out.print("My Tree contains:(In order traversal)  ");
 		bst.traversal();
-		System.out.println();
-		System.out.println();
-		System.out.println("Minimum value: " + bst.getMin());
-		System.out.println("Maximum value: " + bst.getMax());
-		
+//		System.out.println();
+//		System.out.println();
+//		System.out.println("Minimum value: " + bst.getMin());
+//		System.out.println("Maximum value: " + bst.getMax());
+//		
 		
 	}
 
