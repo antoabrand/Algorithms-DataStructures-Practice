@@ -31,16 +31,21 @@ public class Add {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		add(1,2,4,3);
+		add(1,2,4,a);
 	}
 	
 	private static void add(Integer ...num) {
 		Integer sum= 0;
 		String answer = "";
-		for(Integer i : num) {
-			sum+=i;
-			System.out.print(answer + i);
-			answer = "+";
+
+		try {
+			for (Integer i : num) {
+				sum += i;
+				System.out.print(answer + i);
+				answer = "+";
+			}
+		} catch (Exception e){
+			System.out.print(e.toString());
 		}
 
 		System.out.println("=" + sum );
