@@ -31,7 +31,7 @@ public class Add {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		add(1,2,4,a);
+		add(1,2,4,2);
 	}
 	
 	private static void add(Integer ...num) {
