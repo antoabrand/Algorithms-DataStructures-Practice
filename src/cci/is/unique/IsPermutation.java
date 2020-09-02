@@ -9,9 +9,10 @@ public class IsPermutation {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String test0 = "dogs   ";
-		String test1 = "GsOD";
+		String test1 = "GsOD1";
 		
 		System.out.println(isPermutation(test0,test1));
+		System.out.println(isPermutation1(test0,test1));
 	}
 	
 	public static boolean isPermutation(String s1, String s2) {
@@ -37,5 +38,26 @@ public class IsPermutation {
 	}
 	
 	
+	public static boolean isPermutation1(String s1, String s2) {
+		int[] tracker = new int [128];
+		String trimmedS1 = s1.trim().toLowerCase();
+		String trimmedS2 = s2.trim().toLowerCase();
+		
+		if(trimmedS1.length() != trimmedS2.length()) return false;
+		
+		for(int i = 0; i < trimmedS1.length(); i++) {
+			tracker[trimmedS1.charAt(i)]++;
+		}
+		
+		for(int j = 0; j < trimmedS2.length(); j++) {
+			tracker[trimmedS2.charAt(j)]--;
+			if(tracker[trimmedS2.charAt(j)] < 0) {
+				return false;
+			}
+		}
+		
+		
+		return true;
+	}
 
 }

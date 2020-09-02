@@ -89,4 +89,16 @@ public class LinkedList<T extends Comparable<T>> implements IList<T>{
 		return this.size;
 	}
 
+	@Override
+	public int find(T data) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int height(T data) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

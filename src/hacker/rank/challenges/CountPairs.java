@@ -1,6 +1,7 @@
 package hacker.rank.challenges;
 
 import java.util.*;
+import hacker.rank.challenges.Human;
 
 public class CountPairs {
 
@@ -8,6 +9,22 @@ public class CountPairs {
 		// setup
 		int[] socks = { 1, 1, 1,1,1,1, 2 };
 		int numberOfSocks = socks.length;
+		
+		Human h1 = Human.getInstance();
+		Human h2 = Human.getInstance();
+		Human h3 = Human.getInstance();
+		
+		h1 = null;
+
+		System.out.println(h1);
+		
+		h1 = Human.getInstance();
+		
+		System.out.println(h1);
+		
+		System.out.println(h2);
+		
+		System.out.println(h3);
 
 		System.out.print(getPairs(numberOfSocks, socks));
 

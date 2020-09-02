@@ -1,6 +1,7 @@
 package project.euler.problems;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /*
@@ -14,6 +15,21 @@ public class LargestPalindromeProduct {
 
 	static List<Long> listOfPalindromes = new ArrayList<>();
 	public static void main(String[] args) {
+		
+		
+		
+		
+		
+		String test = new String("someword");
+		String test2 = new String("omeword");
+		System.out.println(test.charAt(0));
+		System.out.println(test2.charAt(0));
+		Character capTest = test.charAt(0);
+
+		String whh = test.replace(test.charAt(0), Character.toUpperCase(capTest));
+		
+		System.out.println(whh);
+		
 		long startTime = System.nanoTime();
 	
 		for (int i = 999; i > 99; i--) {
@@ -32,7 +48,7 @@ public class LargestPalindromeProduct {
 		double inSeconds = inMili/1000;
 		System.out.println("Total Time: "+ inSeconds);
 	}
-
+	
 	public static Long getProduct(int firstNum, int secondNum) {
 
 		Long product = (long)firstNum * (long)secondNum;
@@ -40,6 +56,18 @@ public class LargestPalindromeProduct {
 			return product;
 		}
 		return -1L;
+	}
+	
+	public static Long getLargestNum(List<Long> listOfPalindromes){
+
+		Long largestNum = 0L;
+
+		for(Long n : listOfPalindromes){
+		    if(n > largestNum) largestNum = n; 
+		}
+
+		return largestNum; 
+
 	}
 
 	private static boolean isPalindrome(Long num) {
@@ -54,15 +82,5 @@ public class LargestPalindromeProduct {
 	}
 	
 
-	public static Long getLargestNum(List<Long> listOfPalindromes){
 
-		Long largestNum = 0L;
-
-		for(Long n : listOfPalindromes){
-		    if(n > largestNum) largestNum = n; 
-		}
-
-		return largestNum; 
-
-	}
 }
