@@ -1,4 +1,4 @@
-package cci.is.unique;
+package cci;
 
 class IsUniqueTest {
 
