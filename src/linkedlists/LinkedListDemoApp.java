@@ -1,4 +1,4 @@
-package tony.linked.lists;
+package linkedlists;
 
 import java.util.LinkedList;
 import java.util.*;

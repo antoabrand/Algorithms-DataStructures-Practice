@@ -1,4 +1,4 @@
-package tony.linked.lists;
+package linkedlists;
 
 public class LinkedList<T extends Comparable<T>> implements IList<T>{
 	

@@ -1,4 +1,4 @@
-package tony.linked.lists;
+package linkedlists;
 
 public interface IList <T> {
 

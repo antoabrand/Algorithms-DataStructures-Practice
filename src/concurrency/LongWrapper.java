@@ -1,4 +1,4 @@
-package tony.concurrency;
+package concurrency;
 
 public class LongWrapper {
 

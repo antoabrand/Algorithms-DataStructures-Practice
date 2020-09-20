@@ -1,4 +1,4 @@
-package tony.linked.lists;
+package linkedlists;
 
 public class Node<T extends Comparable<T>> { //extend Comparable to compare nodes to eachother and check if
 	//if it is a String node, Integer node, etc...

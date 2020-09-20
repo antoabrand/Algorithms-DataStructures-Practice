@@ -1,4 +1,4 @@
-package tony.sorts;
+package sorting.serching;
 
 public class InsertionSort {
 
