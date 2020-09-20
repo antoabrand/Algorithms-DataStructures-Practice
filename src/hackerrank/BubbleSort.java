@@ -1,4 +1,4 @@
-package hacker.rank.challenges;
+package hackerrank;
 
 public class BubbleSort {
 

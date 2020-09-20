@@ -1,4 +1,4 @@
-package hacker.rank.challenges.Kangaroo;
+package hackerrank;
 
 public class Kangaroo {
 

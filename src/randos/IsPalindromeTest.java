@@ -1,4 +1,4 @@
-package randos.isPalindrome;
+package randos;
 
 public class IsPalindromeTest {
 

@@ -1,4 +1,4 @@
-package project.euler.problems;
+package project.euler;
 
 /**
  * 

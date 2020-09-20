@@ -1,7 +1,8 @@
-package hacker.rank.challenges;
+package hackerrank;
 
 import java.util.*;
-import hacker.rank.challenges.Human;
+
+import hackerrank.Human;
 
 public class CountPairs {
 

@@ -1,4 +1,4 @@
-package project.euler.problems;
+package project.euler;
 
 import java.util.ArrayList;
 import java.util.Collections;
