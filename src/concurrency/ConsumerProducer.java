@@ -2,84 +2,84 @@ package concurrency;
 
 public class ConsumerProducer {
 
-	private static Object lock = new Object();
-	private static int [] buffer;
-	private static int count;
+  private static Object lock = new Object();
+  private static int[] buffer;
+  private static int count;
 
-	static class Producer {
+  static class Producer {
 
-		void produce() {
-			if (isFull(buffer)) {
-				try {
-					lock.wait();
-				} catch (InterruptedException e) {
-					
-					e.printStackTrace();
-				}
-			}
-			buffer[count++] = 1;
-			notify();
+    void produce() {
+      if (isFull(buffer)) {
+        try {
+          lock.wait();
+        } catch (InterruptedException e) {
 
-		}
-	}
+          e.printStackTrace();
+        }
+      }
+      buffer[count++] = 1;
+      notify();
 
-	static class Consumer {
+    }
+  }
 
-		void consume() {
-			if (isEmpty(buffer)) {
-				try {
-					lock.wait();
-				} catch (InterruptedException e) {
-					
-					e.printStackTrace();
-				}
-			}
-			buffer[--count] = 0;
-			notify();
-		}
-	}
+  static class Consumer {
 
-	public static boolean isEmpty(int[] buffer) {
-		return count == 0;
-	}
+    void consume() {
+      if (isEmpty(buffer)) {
+        try {
+          lock.wait();
+        } catch (InterruptedException e) {
 
-	public static boolean isFull(int[] buffer) {
-		return count == buffer.length;
-	}
+          e.printStackTrace();
+        }
+      }
+      buffer[--count] = 0;
+      notify();
+    }
+  }
 
-	public static void main(String... args) throws InterruptedException {
+  public static boolean isEmpty(int[] buffer) {
+    return count == 0;
+  }
 
-		count = 0;
-		buffer = new int[10];
+  public static boolean isFull(int[] buffer) {
+    return count == buffer.length;
+  }
 
-		Producer producer = new Producer();
-		Consumer consumer = new Consumer();
+  public static void main(String... args) throws InterruptedException {
 
-		Runnable produceTask = () -> {
-			for (int i = 0; i < 50; i++) {
-				producer.produce();
-			}
-			System.out.println("Done producing :) ");
-		};
+    count = 0;
+    buffer = new int[10];
 
-		Runnable consumeTask = () -> {
-			for (int i = 0; i < 50; i++) {
-				consumer.consume();
-			}
-			System.out.println("Done consuming :) ");
-		};
+    Producer producer = new Producer();
+    Consumer consumer = new Consumer();
 
-		Thread producerThread = new Thread(produceTask);
-		Thread consumerThread = new Thread(consumeTask);
+    Runnable produceTask = () -> {
+      for (int i = 0; i < 50; i++) {
+        producer.produce();
+      }
+      System.out.println("Done producing :) ");
+    };
 
-		producerThread.start();
-		consumerThread.start();
-		
-		producerThread.join();
-		consumerThread.join();
-		
-		System.out.println("Count is at: " + count);
+    Runnable consumeTask = () -> {
+      for (int i = 0; i < 50; i++) {
+        consumer.consume();
+      }
+      System.out.println("Done consuming :) ");
+    };
 
-	}
+    Thread producerThread = new Thread(produceTask);
+    Thread consumerThread = new Thread(consumeTask);
+
+    producerThread.start();
+    consumerThread.start();
+
+    producerThread.join();
+    consumerThread.join();
+
+    System.out.println("Count is at: " + count);
+
+  }
 
 }

@@ -1,16 +1,16 @@
 package binary.search.tree;
 
-public interface Tree<T>{
-	
-	public void traversal();
+public interface Tree<T> {
 
-	public void add(T data);
+  public void traversal();
 
-	public void remove(T data);
+  public void add(T data);
 
-	public T getMin();
+  public void remove(T data);
 
-	public T getMax();
-	
-	public int getSize();
+  public T getMin();
+
+  public T getMax();
+
+  public int getSize();
 }
