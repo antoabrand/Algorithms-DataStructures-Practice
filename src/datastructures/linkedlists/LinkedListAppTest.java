@@ -1,4 +1,4 @@
-package linkedlists;
+package datastructures.linkedlists;
 
 public class LinkedListAppTest {
 

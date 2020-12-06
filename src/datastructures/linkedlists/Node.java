@@ -1,4 +1,4 @@
-package linkedlists;
+package datastructures.linkedlists;
 
 public class Node<T extends Comparable<T>> { // extend Comparable to compare nodes to eachother and
                                              // check if
