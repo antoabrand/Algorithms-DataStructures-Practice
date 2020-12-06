@@ -1,4 +1,4 @@
-package hackerrank;
+package com.hackerrank;
 
 public class Human {
   private static Human human;

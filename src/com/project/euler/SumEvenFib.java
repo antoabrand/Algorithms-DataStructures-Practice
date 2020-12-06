@@ -1,4 +1,4 @@
-package project.euler;
+package com.project.euler;
 
 public class SumEvenFib {
 
