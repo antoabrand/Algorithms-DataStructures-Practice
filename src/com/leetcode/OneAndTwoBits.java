@@ -1,4 +1,4 @@
-package com.code.leet;
+package com.leetcode;
 
 /**
  * Description: We have two special characters. The first character can be

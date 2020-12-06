@@ -1,4 +1,4 @@
-package com.chef.code;
+package com.codechef;
 
 import java.io.IOException;
 import java.util.Scanner;

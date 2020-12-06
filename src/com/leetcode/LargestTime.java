@@ -1,4 +1,4 @@
-package com.code.leet;
+package com.leetcode;
 
 public class LargestTime {
 

@@ -1,4 +1,4 @@
-package com.chef.code;
+package com.codechef;
 
 // https://www.codechef.com/problems/HS08TEST
 
